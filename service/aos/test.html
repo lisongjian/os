@@ -1,0 +1,14 @@
+<table border=1>
+<tr>
+    <th>user</th>
+    <th>time</th>
+    <th>points</th>
+</tr>
+{% for d in datas %}
+<tr>
+    <td> {{ d['user'] }}</td>
+    <td> {{ d['time'] }}</td>
+    <td> {{ d['points'] }}</td>
+</tr>
+{% end %}
+</table>

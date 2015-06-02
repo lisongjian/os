@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>特别红利任务</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="/static/css/task.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<header class="header">
+				<h1>特别红利任务</h1>{% if scopeid %}{{ scopeid }}{% end %}
+			</header>
+			<section class="section">
+				<div class="module">
+					<h3 class="title">任务时间</h3>
+					<p class="content">{% if data['stime'] %}{{ data['stime'] }}{% end %}~{% if data['etime'] %}{{ data['etime'] }}{% end %}</p>
+				</div>
+				<div class="module">
+					<h3 class="title">任务内容</h3>
+					<p class="content"> {% if data['description'] %}{{ data['description'] }}{% end %}</p>
+				</div>
+				<div class="module">
+					<h3 class="title">图片说明</h3>
+					<div class="content picShow">
+						<img src="https://www.baidu.com/img/bd_logo1.png" alt="" />
+					</div>
+				</div>
+				<div class="module">
+					<h3 class="title">我要报名</h3>
+					<div  class="content">
+						<div class="box boxEmail">
+							<label for="email">Email</label>
+							<input type="email" placeholder="必填，便於我們與您聯繫" id="email" />
+						</div>
+						<div class="box boxLineId">
+							<label for="lineId">LINE ID</label>
+							<input type="text" placeholder="选填" id="lineId" />
+						</div>
+						<input type="button" value="我要报名" id="signUp" class="btn signUp" />
+					</div>
+				</div>
+				<div class="module">
+					<div class="content">
+						<input type="button" class="btn success" value="报名成功" />
+						<input type="button" class="btn full" value="名額已滿，請保持關注新任務" />
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="popUp">
+			<div class="bg"></div>
+			<div class="content">恭喜你，报名成功</div>
+		</div>
+		<script type="text/javascript" src="/static/js/jquery.js"></script>
+		<script type="text/javascript" src="/static/js/task.js"></script>
+	</body>
+</html>

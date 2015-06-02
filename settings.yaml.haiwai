@@ -1,0 +1,28 @@
+mysql:
+    host: "127.0.0.1"
+    database: tipshunter 
+    user: root
+    password: "ILoveYoumi?Haiwai123"
+
+coupons:
+    static_url: "http://gofree.cc/static/"
+
+goods:
+    static_url: "http://gofree.cc/static/"
+
+tornado:
+    # Tornado 的相关配置，见
+    # http://www.tornadoweb.org/en/stable/web.html#tornado.web.Application.settings
+    debug: True
+    # 是否自动reload 代码（如果代码有变化）
+    # Autoreload mode is not compatible with the multi-process mode of HTTPServer. 
+    # You must not give HTTPServer.start an argument other than 1 
+    # (or call tornado.process.fork_processes) if you are using autoreload mode.
+    autoreload: True
+
+crypt:
+    rc4key: "d16d3907a3a47643791899f6c3157f12"
+    aeskey: "AjGfpbbQmU7EAnkJ"
+
+log:
+    callback_log: "/home/ubuntu/vhost/overseaServerLog/callback.log"

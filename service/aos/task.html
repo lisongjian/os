@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>特別紅利任務</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="/static/css/task.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<header class="header">
+				<h1>特別紅利任務</h1>
+			</header>
+			<section class="section">
+				<div class="module">
+					<h3 class="title">任務時間</h3>
+					<p class="content">{% if data['stime'] %}{{ data['stime'] }}{% end %}~{% if data['etime'] %}{{ data['etime'] }}{% end %}</p>
+				</div>
+				<div class="module">
+					<h3 class="title">任務內容</h3>
+					<p class="content"> {% if data['description'] %}{{ data['description'] }}{% end %}</p>
+				</div>
+				<div class="module">
+					<h3 class="title">圖片說明</h3>
+					<div class="content picShow">
+						<img src="{{ data['desc_url'] }}" alt="" />
+					</div>
+				</div>
+				<div class="module register">
+					<h3 class="title">我要報名</h3>
+					<div  class="content">
+						<div class="box boxEmail">
+							<label for="email">Email</label>
+							<input type="email" placeholder="必填，便於我們與您聯繫" id="email" />
+						</div>
+						<div class="box boxLineId">
+							<label for="lineId">LINE ID</label>
+							<input type="text" placeholder="選填" id="lineId" />
+						</div>
+						<input type="hidden" value="{{ scopeid }}" id="scopeid"/>
+						<input type="button" value="我要報名" id="signUp" class="btn signUp" />
+					</div>
+				</div>
+				<div class="module">
+					<div class="content">
+						<input type="button" class="btn success" value="報名成功" />
+						<input type="button" class="btn full" value="名額已滿，請保持關注新任務" />
+                        <input type="hidden" id="url" value="{{ data['go_url'] }}" />
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="popUp">
+			<div class="bg"></div>
+			<div class="content">
+                <p class="tip"> 恭喜妳，報名成功</p>
+                <a class="enter">去做任务</a>
+                <a class="close">关闭</a>
+            </div>
+		</div>
+		<script type="text/javascript" src="/static/js/jquery.js"></script>
+		<script type="text/javascript" src="/static/js/task.js"></script>
+	</body>
+</html>
