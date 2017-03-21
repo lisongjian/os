@@ -4,8 +4,8 @@
 
 ```bash
 git init
-git clone git@git.umlife.net:overseas/server.git
-cd oversea-server
+git clone 
+cd os
 sudo apt-get install python-pip python-mysqldb python-lxml
 pip install -i http://pypi.douban.com/simple -r requirements.txt
 python app.py
